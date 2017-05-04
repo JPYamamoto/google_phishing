@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Links -->
+            <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+            <!-- End Stylesheets -->
+            <!-- Fonts -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Bold.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Bold.woff2">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Light.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Light.woff2">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Medium.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Medium.woff2">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Regular.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Regular.woff2">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Thin.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Thin.woff2">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <!-- End Fonts -->
+        <!-- End Links -->
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#42b3f4">
+        <meta name="msapplication-navbutton-color" content="#42b3f4">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#42b3f4">
+        <!-- End Meta -->
+        <title>Sign In - Google Accounts</title>
+        <style type="text/css">
+           .input-field input[type=email]:focus + label {
+             color: #4285f4;
+           }
+           .input-field input[type=email]:focus {
+             border-bottom: 1px solid #4285f4;
+             box-shadow: 0 1px 0 0 #4285f4;
+           }
+           .input-field input[type=password]:focus + label {
+             color: #4285f4;
+           }
+           .input-field input[type=password]:focus {
+             border-bottom: 1px solid #4285f4;
+             box-shadow: 0 1px 0 0 #4285f4;
+           }
+           .input-field input[type=email].invalid {
+             border-bottom: 1px solid #d50000;
+             box-shadow: 0 1px 0 0 #d50000;
+           }
+        </style>
+    </head>
+    <body style="height: 100vh">
+        <div class="background" style="color: #999999; position: absolute; top: 0; left: 0; z-index: -100; height: 100vh; width: 100%">
+            <svg jsname="BUfzDd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" preserveAspectRatio="xMinYMin slice" aria-hidden="true"><path fill="#efefee" d="M592.66 0c-15 64.092-30.7 125.285-46.598 183.777C634.056 325.56 748.348 550.932 819.642 809.5h419.672C1184.518 593.727 1083.124 290.064 902.637 0H592.66z"></path><path fill="#f6f6f6" d="M545.962 183.777c-53.796 196.576-111.592 361.156-163.49 490.74 11.7 44.494 22.8 89.49 33.1 134.883h404.07c-71.294-258.468-185.586-483.84-273.68-625.623z"></path><path fill="#f7f7f7" d="M153.89 0c74.094 180.678 161.088 417.448 228.483 674.517C449.67 506.337 527.063 279.465 592.56 0H153.89z"></path><path fill="#fbfbfc" d="M153.89 0H0v809.5h415.57C345.477 500.938 240.884 211.874 153.89 0z"></path><path fill="#ebebec" d="M1144.22 501.538c52.596-134.583 101.492-290.964 134.09-463.343 1.2-6.1 2.3-12.298 3.4-18.497 0-.2.1-.4.1-.6 1.1-6.3 2.3-12.7 3.4-19.098H902.536c105.293 169.28 183.688 343.158 241.684 501.638v-.1z"></path><path fill="#e1e1e1" d="M1285.31 0c-2.2 12.798-4.5 25.597-6.9 38.195C1321.507 86.39 1379.603 158.98 1440 257.168V0h-154.69z"></path><path fill="#e7e7e7" d="M1278.31,38.196C1245.81,209.874 1197.22,365.556 1144.82,499.838L1144.82,503.638C1185.82,615.924 1216.41,720.211 1239.11,809.6L1439.7,810L1439.7,256.768C1379.4,158.78 1321.41,86.288 1278.31,38.195L1278.31,38.196z"></path></svg>
+        </div>
+        <div id="background" class="hide" style="background-color: rgba(255, 255, 255, 0.5); height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 200; height: 100vh; width: 100%">
+            <div class="valign-wrapper center-align" style="height: 100%; width: 100%">
+                <div class="container">
+                    <div class="preloader-wrapper big active center-align">
+                      <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                
+                      <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                
+                      <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                
+                      <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="valign-wrapper" style="height: 100%">
+            <div class="container" id="all">
+                <div class="row hide" id="final">
+                    <div class="col s6 offset-s3">
+                        <div class="card-panel white">
+                            <div class="container" style="width: 90%;">
+                                <div class="hide" id="audio"></div>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <h4>You've been a victim of phishing.</h4>
+                                    </div>
+                                    <div class="col s12 center-align">
+                                        <h6>A social experiment, coded by Juan Pablo Yamamoto.</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <table class="highlight centered responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Account</th>
+                                                <th>Password</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td id="write-user"></td>
+                                                <td id="write-pass"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <h5>Would you like to support this anti-phishing campaign?</h5>
+                                        <h6>Please, fill in the following form.</h6>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <form method="POST">
+                                            <p class="center-align">Do you know what phising is?</p>
+                                            <p class="center-align input-field">
+                                                <input class="with-gap" name="know" type="radio" id="yes-know" />
+                                                <label for="yes-know">Yes</label>
+                                                <input class="with-gap" name="know" type="radio" id="no-know" />
+                                                <label for="no-know">No</label>
+                                            </p>
+                                            <p class="center-align">Had you been a victim of phishing before?</p>
+                                            <p class="center-align input-field">
+                                                <input class="with-gap" name="victim" type="radio" id="yes-victim" />
+                                                <label for="yes-victim">Yes</label>
+                                                <input class="with-gap" name="victim" type="radio" id="no-victim" />
+                                                <label for="no-victim">No</label>
+                                            </p>
+                                            <p></p>
+                                            <br>
+                                            <p class="center-align input-field">
+                                                <textarea id="textarea" class="materialize-textarea"></textarea>
+                                                <label for="textarea">What is your opinion about this kind of attack?</label>
+                                            <blockquote>
+                                            Disclaimer: All information gathered by this site, is stored only in your computer. No one will ever know your credentials because of this website.
+                                            </blockquote>
+                                                <button class="btn waves-effect waves-light blue right" id="submit" name="action">Submit
+                                                    <i class="material-icons right">send</i>
+                                                </button>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="final-hide">
+                    <div class="row">
+                        <div class="col s6 offset-s3">
+                            <div class="card-panel white">
+                                <div class="container" style="width: 90%;">
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png" class="responsive-img" style=>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div id="intro">
+                                                <h5>Sign in</h5>
+                                                <h6>with your Google Account</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 input-field" id="input">
+                                            <input id="email" type="email" class="validate">
+                                            <label for="email" data-error="Enter a valid email or phone number">Email or phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s6" id="options">
+                                            <a class='dropdown-button' href='#' data-activates='dropdown-moreoptions'>More options</a>
+                                        </div>
+                                        <div class="col s6 right-align">
+                                            <a class="waves-effect waves-light btn" style="background-color: #4285f4" id="next">Next</a>
+                                        </div>
+                                    </div>
+                                    <div class="row"></div>
+                                    <div class="row"></div>
+                                    <div class="row"></div>
+                                    <div class="row"></div>
+                                    <div class="row"></div>
+                                    <div class="row"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">
+                                    <a href="#" class="black-text" style="font-size: 0.75em">English (United States) <span><i class="material-icons" style="font-size: 1.5em;">arrow_drop_down</i></span></a>
+                                </div>
+                                <div class="col s4 offset-s4">
+                                    <a href="https://support.google.com/accounts?hl=en" class="waves-effect waves-light grey-text text-darken-1 btn-flat" style="font-size: 0.7em; text-transform: none; padding: 0 1rem;">Help</a>
+                                    <a href="https://accounts.google.com/TOS?loc=MX&hl=en&privacy=true" class="waves-effect waves-light grey-text text-darken-1 btn-flat" style="font-size: 0.7em; text-transform: none; padding: 0 1rem;">Privacy</a>
+                                    <a href="https://accounts.google.com/TOS?loc=MX&hl=en" class="waves-effect waves-light grey-text text-darken-1 btn-flat" style="font-size: 0.7em; text-transform: none; padding: 0 1rem;">Terms</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-action-btn">
+            <a id="audio-stop" class="waves-effect waves-light btn btn-floating hide" ><i class="material-icons">pause</i></a>
+        </div>
+        <div class="tap-target" data-activates="audio-stop">
+            <div class="tap-target-content">
+                <h5>Stop Audio</h5>
+                <p>I know, it is annoying. But not as annoying as it is to be hacked.</p>
+            </div>
+        </div>
+        <div class="fixed-action-btn" id="secure">
+            <div class="card-panel white z-depth-5" style="padding: 10px; max-width: 350px">
+                <div class="row">
+                    <div class="col s2">
+                        <img src="https://www.gstatic.com/accounts/promos/shield_security_2x_web_48dp.png" style="float: left; height: 48px; width: 48px">
+                    </div>
+                    <div class="col s10">
+                        <div class="row">
+                            <span style="font-size: 15px; font-weight: 500">New look, same secure sign-in</span>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <p style="font-size: 14px; color: rgba(0,0,0,.54);">We've made it faster & easier to securely sign in to your Google Account. <a href="https://support.google.com/accounts?p=signin_newlook" style="color: #4285f4">Learn more</a></p>
+                            </div>
+                        </div>
+                        <div class="right-align">
+                            <a class="waves-effect waves-light btn-flat right-align" style="color: #4285f4; font-weight: 500">Ok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown-moreoptions' class="dropdown-content z-depth-4">
+            <li><a href="https://accounts.google.com/signin/usernamerecovery?hl=en" class="black-text" style="font-size: 0.9em">Forgot email?</a></li>
+            <li><a href="https://accounts.google.com/SignUp?hl=en" class="black-text" style="font-size: 0.9em">Create account</a></li>
+            <li><a href="https://support.google.com/accounts/answer/2917834?visit_id=0-636294352811938663-3221958346&p=signin_privatebrowsing&hl=en&rd=1" class="black-text" style="font-size: 0.9em">Not your device?</a></li>
+        </ul>
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <!-- End Scripts -->
+        <script type="text/javascript">
+        $(function () {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                gutter: 0,
+                belowOrigin: false,
+                alignment: 'left',
+            });
+            
+            var user = '';
+            var pass = '';
+            $('#next').on('click', function () {
+                if (user == '') {
+                    user = $('#email').val();
+                }
+                $('#background').removeClass('hide');
+                setTimeout(function(){
+                    $('#background').addClass('hide');
+                    $('#input').html('<input id="pass" type="password">' + '<label for="pass" class="active">Enter your password</label>');
+                    $('#intro').html('<h5>Hi ' + user + '</h5>');
+                    Materialize.updateTextFields();
+                    $('#next').prop('id', 'next2')
+                    $('#next2').on('click', function () {
+                        pass = $('#pass').val();
+                        $('#final-hide').remove();
+                        $('#secure').remove();
+                        $('#write-user').text(user);
+                        $('#write-pass').text(pass);
+                        $('#audio').html('<audio src="http://www.pacdv.com/sounds/people_sound_effects/laugh-12.wav" autoplay loop></audio>')
+                        $('#final').removeClass('hide');
+                        $('#audio-stop').removeClass('hide');
+                        $('.tap-target').tapTarget('open');
+                    })
+                }, 2000);
+                $('#submit').on('click', function () {
+                    alert('Thank you for your time.');
+                })
+                $('#audio-stop').on('click', function() {
+                    $('#audio').remove();
+                    $('#audio-stop').remove();
+                })
+            })
+        })
+        </script>
+    </body>
+</html>
